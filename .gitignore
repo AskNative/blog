@@ -58,3 +58,6 @@ config.js
 
 # Coverage reports
 coverage.html
+
+# Sublime 
+*.sublime-*
