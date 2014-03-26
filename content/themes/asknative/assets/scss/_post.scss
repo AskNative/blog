@@ -3,6 +3,92 @@
    ========================================================================== */
 
 /*
+   Post item
+   ========================================================================== */
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+  position: relative;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  max-width: 700px;
+  width: 80%;
+  border-bottom: $color-gray-light 1px solid;
+  word-break: break-word;
+  hyphens: auto;
+
+  @include screen-lg {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
+
+  @include screen-sm {
+    margin-right: 16px;
+    margin-left: 16px;
+    width: auto;
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
+}
+
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
+.post:after {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  display: block;
+  margin-left: -5px;
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+
+  background: #fff;
+  box-shadow: #fff 0 0 0 5px;
+  content: "";
+}
+
+/*
+   Post title
+   ========================================================================== */
+
+.post-title { margin:0; }
+
+.post-title a { text-decoration: none; }
+
+.post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+/*
+   Post meta
+   ========================================================================== */
+
+.post-meta {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  color: $color-meta;
+  font-size: 1.5rem;
+  font-family: $font-family-sans-serif;
+
+  @include screen-sm { font-size: 1.3rem; }
+}
+
+.post-meta a {
+  color: $color-meta;
+  text-decoration: none;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+/*
    Post Template
    ========================================================================== */
 
@@ -35,6 +121,10 @@
   padding: 2.5rem 0;
 }
 
+/*
+   Post content
+   ========================================================================== */
+
 /* Keep large images within the bounds of the post-width */
 .post-content img {
   display: block;
@@ -44,7 +134,7 @@
 }
 
 /*
-   Post Footer
+   Post footer
    ========================================================================== */
 
 /* The author credit area after the post */

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Table of Contents
+   Main CSS
    ========================================================================== */
 
 /* Core variables and mixins */
@@ -10,13 +10,16 @@
 @import "normalize";
 
 /* Core CSS */
+@import "base";
 @import "icons";
-@import "general";
-@import "utilities";
-@import "theme";
-
-/* Components */
+@import "site";
+@import "blog";
 @import "post";
-@import "embedded";
+@import "user";
+@import "publish";
 @import "pagination";
 @import "footer";
+
+/* Utility classes */
+@import "utilities";
+@import "embedded";

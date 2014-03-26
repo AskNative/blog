@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Site
+   ========================================================================== */
+
+/*
+   Site header
+   ========================================================================== */
+
+/* Big cover image on the home page */
+.site-head {
+  position: relative;
+  display: table;
+  margin-bottom: 5rem;
+  width: 100%;
+  height: 60%;
+  background: $color-gray-dark no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+
+  @include screen-lg {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    padding: 15% 0;
+    min-height: 240px;
+    height: auto;
+  }
+
+  @include screen-sm { padding: 10% 0; }
+}
+
+/*
+   Site footer
+   ========================================================================== */
+
+.site-footer {
+  position: relative;
+  margin: 8rem 0 0 0;
+  padding: 4rem 0;
+  border-top: $color-gray-light 1px solid;
+  background: #F7FAFB;
+  color: $color-footer-text;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: $font-family-sans-serif;
+  line-height: 1.7em;
+
+  @include screen-sm {
+    margin-top: 6rem;
+    font-size: 1.1rem;
+  }
+}
+
+.site-footer a {
+  color: $color-footer-text;
+  text-decoration: underline;
+
+  &:hover { color: $color-footer-text-hover; }
+}

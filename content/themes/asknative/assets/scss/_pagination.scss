@@ -22,6 +22,10 @@
 
 .pagination a { color: $color-meta; }
 
+/*
+   Older/Newer posts
+   ========================================================================== */
+
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
@@ -45,6 +49,10 @@
 
 .older-posts { right: 0; }
 .newer-posts { left: 0; }
+
+/*
+   Page number
+   ========================================================================== */
 
 .page-number {
   display: inline-block;

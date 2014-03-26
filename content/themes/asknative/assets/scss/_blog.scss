@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+
+/*
+   Blog logo
+   ========================================================================== */
+
+.blog-logo { text-decoration: none; }
+
+/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+.blog-logo img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100px;
+  width: auto;
+  line-height: 0;
+
+  @include screen-sm { max-height: 80px; }
+}
+
+/*
+   Blog title
+   ========================================================================== */
+
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title {
+  margin: 10px 0 10px 0;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: $font-family-sans-serif;
+  // text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+
+  @include screen-lg {
+    letter-spacing: -1px;
+    font-size: 4rem;
+  }
+
+  @include screen-sm { font-size: 3rem; }
+}
+
+/*
+   Blog description
+   ========================================================================== */
+
+.blog-description {
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 1.8rem;
+  font-family: $font-family-serif;
+  line-height: 1.5em;
+
+  @include screen-lg {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
+
+  @include screen-sm { font-size: 1.5rem; }
+}
