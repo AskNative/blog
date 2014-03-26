@@ -6,17 +6,17 @@
  * Media queries
  */
 
-$screen-lg: 900px;
-$screen-sm: 500px;
+$screen-lg:               900px;
+$screen-sm:               500px;
 
 /**
  * Colors
  */
 
-// $color-gray-darker:       lighten(#000, 13.5%); // #222
+// $color-gray-darker:    lighten(#000, 13.5%); // #222
 $color-gray-dark:         lighten(#000, 20%);     // #333
 $color-gray:              lighten(#000, 33.5%);   // #555 / #4A4A4A;
-// $color-gray-light:        #EBF2F6;
+// $color-gray-light:     #EBF2F6;
 $color-gray-light:        lighten(#000, 60%);     // #999
 $color-gray-lighter:      lighten(#000, 93.5%);   // #eee — Mainly for strokes and borders
 
@@ -52,7 +52,34 @@ $font-family-sans-serif:  'Open Sans', sans-serif;
 $font-family-serif:       'Noto Serif', serif;
 $font-family-monospace:   Inconsolata, monospace, sans-serif;
 
-$font-size-base: 1rem;
+$font-size-base:          1rem;
+$font-size-h1:            5rem;
+$font-size-h2:            4rem;
+$font-size-h3:            3.5rem;
+$font-size-h4:            3rem;
+$font-size-h5:            2.5rem;
+$font-size-h6:            2rem;
+
+// h1 {
+//   @include screen-lg { font-size: 4.8rem; }
+//   @include screen-sm { font-size: 3rem; }
+// }
+
+// h2 {
+//   @include screen-lg { font-size: 3.8rem; }
+//   @include screen-sm { font-size: 3rem; }
+// }
+
+// h3 {
+//   @include screen-lg { font-size: 3.3rem; }
+//   @include screen-sm { font-size: 2.8rem; }
+// }
+
+// h4 {
+//   @include screen-lg { font-size: 2.8rem; }
+//   @include screen-sm { font-size: 2.3rem; }
+// }
+
 // $font-size-base:          14px !default;
 // $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -67,14 +94,12 @@ $font-size-base: 1rem;
 // 0.85em
 // 0.9em
 // 1em
-// 1rem
 // 1.1rem
 // 1.3rem
 // 1.4rem
 // 1.5rem
 // 1.7rem
 // 1.8rem
-// 2em
 // 2.0rem
 // 2rem
 // 2.3rem
@@ -88,7 +113,3 @@ $font-size-base: 1rem;
 // 4.8rem
 // 5rem
 // 10px
-// 62.5%
-// 75%
-// 80%
-// 100%
