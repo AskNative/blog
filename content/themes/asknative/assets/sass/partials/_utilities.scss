@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Utilities - These things get used a lot
+   ========================================================================== */
+
+/* Hides shit */
+.hidden {
+  display: none;
+  visibility: hidden;
+  text-indent: -9999px;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+  position: relative;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 80%;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}

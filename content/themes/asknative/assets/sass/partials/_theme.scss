@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Theme - The main styles for the the theme
+   ========================================================================== */
+
+/* Big cover image on the home page */
+.site-head {
+  position: relative;
+  display: table;
+  margin-bottom: 5rem;
+  width: 100%;
+  height: 60%;
+  background: #303538 no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.blog-logo {
+  text-decoration: none;
+}
+
+/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+.blog-logo img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100px;
+  width: auto;
+  line-height: 0;
+}
+
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title {
+  margin: 10px 0 10px 0;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: 'Open Sans', sans-serif;
+  /*text-shadow: 0 1px 6px rgba(0,0,0,0.1);*/
+}
+
+.blog-description {
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 1.8rem;
+  font-family: 'Noto Serif', serif;
+  line-height: 1.5em;
+}
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+  position: relative;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  max-width: 700px;
+  width:80%;
+  border-bottom: #EBF2F6 1px solid;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
+.post:after {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  display: block;
+  margin-left: -5px;
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: #fff 0 0 0 5px;
+  content: "";
+}
+
+.post-title {
+  margin:0;
+}
+
+.post-title a {
+  text-decoration: none;
+}
+
+.post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+.post-meta {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  color: #9EABB3;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.post-meta a {
+  color: #9EABB3;
+  text-decoration: none;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+.user-meta {
+  position: relative;
+  padding: 0.3rem 40px 0 100px;
+  min-height: 77px;
+}
+
+.user-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-name {
+  display: block;
+  font-weight: bold;
+}
+
+.user-bio {
+  display: block;
+  max-width: 440px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+
+.publish-meta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4.3rem 0 4rem 0;
+  text-align: right;
+}
+
+.publish-heading {
+  display: block;
+  font-weight: bold;
+}
+
+.publish-date {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
