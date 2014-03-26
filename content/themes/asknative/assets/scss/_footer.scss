@@ -22,7 +22,7 @@
   margin-left: -15px;
   width: 28px;
   height: 28px;
-  border: $color-gray-light 1px solid;
+  border: $color-border 1px solid;
   border-radius: 50px;
   background: #fff;
   text-align: center;
@@ -35,7 +35,7 @@
   position: absolute;
   top: 9px;
   left: 9px;
-  color: #D2DEE3;
+  color: $color-subscribe;
   font-weight: bold;
   font-size: 10px;
   transition: color 0.5s ease;
@@ -43,7 +43,7 @@
 
 /* Add a box shadow to on hover */
 .subscribe:hover {
-  box-shadow: $color-shadow 0 0 0 3px;
+  box-shadow: $color-subscribe-shadow 0 0 0 3px;
   transition: box-shadow 0.25s;
 }
 

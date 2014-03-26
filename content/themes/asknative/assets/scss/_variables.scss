@@ -13,39 +13,82 @@ $screen-sm: 500px;
  * Colors
  */
 
+// $color-gray-darker:       lighten(#000, 13.5%); // #222
+$color-gray-dark:         lighten(#000, 20%);     // #333
+$color-gray:              lighten(#000, 33.5%);   // #555 / #4A4A4A;
+// $color-gray-light:        #EBF2F6;
+$color-gray-light:        lighten(#000, 60%);     // #999
+$color-gray-lighter:      lighten(#000, 93.5%);   // #eee — Mainly for strokes and borders
+
 /* Main colors */
 $color-text:              #3A4145;
-$color-selection:         #D6EDFF;
-$color-meta:              #9EABB3;
-$color-shadow:            rgba(0,0,0,0.15);
-
-$color-gray-lightest:     #F7FAFB; // Footer bg
-$color-gray-lighter:      #EFEFEF; // Darkened version of lightest
-$color-gray-light:        #EBF2F6;
-$color-gray:              #4A4A4A;
-$color-gray-dark:         #303538; // Cover bg
-
-// $gray-darker:            lighten(#000, 13.5%) !default; // #222
-// $gray-dark:              lighten(#000, 20%) !default;   // #333
-// $gray:                   lighten(#000, 33.5%) !default; // #555
-// $gray-light:             lighten(#000, 60%) !default;   // #999
-// $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
-
 $color-primary:           #E64B17;
-$bg-color:                #FFF;
+$color-meta:              $color-gray-light; // #9EABB3;
+$color-shadow:            rgba(0,0,0,.15);
+$color-border:            $color-gray-lighter;
 
 /* Footer colors */
 $color-footer-text:       #BBC7CC;
 $color-footer-text-hover: darken($color-footer-text, 40%); // #50585D
 
 /* Misc colors */
-$color-twitter:           rgb(58, 172, 238);
-$color-facebook:          rgb(59, 89, 152);
+$color-twitter:           rgb(58,172,238);
+$color-facebook:          rgb(59,89,152);
+$color-subscribe:         #D2DEE3;
+$color-subscribe-shadow:  rgba(0,0,0,.05);
+
+/* Background colors */
+$body-bg:                 #FFF;
+$cover-bg:                $color-gray-dark;
+$footer-bg:               #F7F7F7; // #F7FAFB;
+
+// #CCC;
 
 /**
  * Typography
  */
 
-$font-family-sans-serif:  'Open Sans', sans-serif; // !default;
-$font-family-serif:       'Noto Serif', serif; // !default;
-$font-family-monospace:   Inconsolata, monospace, sans-serif; // !default;
+$font-family-sans-serif:  'Open Sans', sans-serif;
+$font-family-serif:       'Noto Serif', serif;
+$font-family-monospace:   Inconsolata, monospace, sans-serif;
+
+$font-size-base: 1rem;
+// $font-size-base:          14px !default;
+// $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+// $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+// $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+// $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-h5:            $font-size-base !default;
+// $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// 0.85em
+// 0.9em
+// 1em
+// 1rem
+// 1.1rem
+// 1.3rem
+// 1.4rem
+// 1.5rem
+// 1.7rem
+// 1.8rem
+// 2em
+// 2.0rem
+// 2rem
+// 2.3rem
+// 2.5rem
+// 2.8rem
+// 3rem
+// 3.3rem
+// 3.5rem
+// 3.8rem
+// 4rem
+// 4.8rem
+// 5rem
+// 10px
+// 62.5%
+// 75%
+// 80%
+// 100%
