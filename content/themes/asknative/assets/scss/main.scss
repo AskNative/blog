@@ -2,16 +2,20 @@
    Table of Contents
    ========================================================================== */
 
-@import "vendor/normalize";
-
+/* Core variables and mixins */
 @import "settings";
 @import "mixins";
 
+/* Reset */
+@import "normalize";
+
+/* Core CSS */
 @import "icons";
 @import "general";
 @import "utilities";
 @import "theme";
 
+/* Components */
 @import "post";
 @import "embedded";
 @import "pagination";
