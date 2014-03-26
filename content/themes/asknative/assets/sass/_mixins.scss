@@ -2,18 +2,20 @@
    Mixins
    ========================================================================== */
 
+/**
+ * Media Queries mixin - Smaller than 500px
+ */
 @mixin screen-sm {
   @media only screen and (max-width: $screen-sm) {
     @content;
   }
 }
 
+/**
+ * Media Query mixin - Smaller than 900px
+ */
 @mixin screen-lg {
   @media only screen and (max-width: $screen-lg) {
     @content;
   }
 }
-
-// @include screen-sm {
-//   background: url('/assets/images/masterhead.jpg') no-repeat center bottom fixed;
-// }

@@ -9,15 +9,29 @@
   margin-bottom: 5rem;
   width: 100%;
   height: 60%;
-  background: #303538 no-repeat center center;
+  background: $color-gray-dark no-repeat center center;
   background-size: cover;
   color: #fff;
   text-align: center;
+
+  @include screen-lg {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    padding: 15% 0;
+    min-height: 240px;
+    height: auto;
+  }
+
+  @include screen-sm { padding: 10% 0; }
 }
 
-.blog-logo {
-  text-decoration: none;
-}
+/*
+   Blog
+   ========================================================================== */
+
+.blog-logo { text-decoration: none; }
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo img {
@@ -26,6 +40,8 @@
   max-height: 100px;
   width: auto;
   line-height: 0;
+
+  @include screen-sm { max-height: 80px; }
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -34,8 +50,15 @@
   letter-spacing: -1px;
   font-weight: bold;
   font-size: 5rem;
-  font-family: 'Open Sans', sans-serif;
-  /*text-shadow: 0 1px 6px rgba(0,0,0,0.1);*/
+  font-family: $font-family-sans-serif;
+  // text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+
+  @include screen-lg {
+    letter-spacing: -1px;
+    font-size: 4rem;
+  }
+
+  @include screen-sm { font-size: 3rem; }
 }
 
 .blog-description {
@@ -44,9 +67,20 @@
   letter-spacing: 0;
   font-weight: 300;
   font-size: 1.8rem;
-  font-family: 'Noto Serif', serif;
+  font-family: $font-family-serif;
   line-height: 1.5em;
+
+  @include screen-lg {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
+
+  @include screen-sm { font-size: 1.5rem; }
 }
+
+/*
+   Post item
+   ========================================================================== */
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -54,10 +88,23 @@
   margin: 4rem auto;
   padding-bottom: 4rem;
   max-width: 700px;
-  width:80%;
-  border-bottom: #EBF2F6 1px solid;
+  width: 80%;
+  border-bottom: $color-gray-light 1px solid;
   word-break: break-word;
   hyphens: auto;
+
+  @include screen-lg {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
+
+  @include screen-sm {
+    margin-right: 16px;
+    margin-left: 16px;
+    width: auto;
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -72,20 +119,17 @@
   height: 7px;
   border: #E7EEF2 1px solid;
   -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+
   background: #fff;
   box-shadow: #fff 0 0 0 5px;
   content: "";
 }
 
-.post-title {
-  margin:0;
-}
+.post-title { margin:0; }
 
-.post-title a {
-  text-decoration: none;
-}
+.post-title a { text-decoration: none; }
 
 .post-excerpt p {
   margin: 1.6rem 0 0 0;
@@ -96,19 +140,25 @@
 .post-meta {
   display: inline-block;
   margin: 0 0 5px 0;
-  color: #9EABB3;
+  color: $color-meta;
   font-size: 1.5rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-family-sans-serif;
+
+  @include screen-sm { font-size: 1.3rem; }
 }
 
 .post-meta a {
-  color: #9EABB3;
+  color: $color-meta;
   text-decoration: none;
 }
 
 .post-meta a:hover {
   text-decoration: underline;
 }
+
+/*
+   User
+   ========================================================================== */
 
 .user-meta {
   position: relative;
@@ -133,6 +183,10 @@
   font-size: 1.4rem;
   line-height: 1.5em;
 }
+
+/*
+   Publish
+   ========================================================================== */
 
 .publish-meta {
   position: absolute;

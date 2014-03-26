@@ -1,18 +1,6 @@
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
-/**
- * Variables
- */
-/* ==========================================================================
-   Settings — Variables for the whole theme
-   ========================================================================== */
-/* ==========================================================================
-   Mixins
-   ========================================================================== */
-/**
- * Import
- */
 /* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -392,6 +380,30 @@ table {
 }
 
 /* ==========================================================================
+   Settings — Variables for the whole theme
+   ========================================================================== */
+/**
+ * Media queries
+ */
+/**
+ * Colors
+ */
+/* Main colors */
+/* Footer colors */
+/* Misc colors */
+/**
+ * Typography
+ */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/**
+ * Media Queries mixin - Smaller than 500px
+ */
+/**
+ * Media Query mixin - Smaller than 900px
+ */
+/* ==========================================================================
    Icons - Sets up the icon font and respective classes
    ========================================================================== */
 /* Import the font file with the icons in it */
@@ -430,11 +442,6 @@ table {
   content: "\e001";
 }
 
-.icon-twitter:before {
-  content: "\e002";
-  font-size: 1.1em;
-}
-
 .icon-google-plus:before {
   content: "\e003";
 }
@@ -443,8 +450,13 @@ table {
   content: "\e004";
 }
 
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em;
+}
+
 /* ==========================================================================
-   3. General - Setting up some base styles
+   General - Setting up some base styles
    ========================================================================== */
 html {
   max-height: 100%;
@@ -455,20 +467,20 @@ html {
 body {
   max-height: 100%;
   height: 100%;
-  color: #3A4145;
+  color: #3a4145;
   font-size: 2.0rem;
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   line-height: 1.6em;
 }
 
 ::-moz-selection {
-  background: #D6EDFF;
+  background: #d6edff;
   color: #222;
   text-shadow: none;
 }
 
 ::selection {
-  background: #D6EDFF;
+  background: #d6edff;
   color: #222;
   text-shadow: none;
 }
@@ -476,9 +488,13 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
   margin-top: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1;
   text-rendering: optimizeLegibility;
+}
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+  color: #50636b;
 }
 
 h1 {
@@ -487,6 +503,19 @@ h1 {
   font-size: 5rem;
   line-height: 1.2em;
 }
+@media only screen and (max-width: 900px) {
+  h1 {
+    text-indent: -2px;
+    font-size: 4.8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h1 {
+    letter-spacing: -1px;
+    font-size: 3rem;
+    line-height: 1.1em;
+  }
+}
 
 h2 {
   text-indent: -2px;
@@ -494,13 +523,45 @@ h2 {
   font-size: 4rem;
   line-height: 1.2em;
 }
+@media only screen and (max-width: 900px) {
+  h2 {
+    font-size: 3.8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h2 {
+    letter-spacing: -1px;
+    font-size: 3rem;
+    line-height: 1.1em;
+  }
+}
 
 h3 {
   font-size: 3.5rem;
 }
+@media only screen and (max-width: 900px) {
+  h3 {
+    font-size: 3.3rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h3 {
+    font-size: 2.8rem;
+  }
+}
 
 h4 {
   font-size: 3rem;
+}
+@media only screen and (max-width: 900px) {
+  h4 {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h4 {
+    font-size: 2.3rem;
+  }
 }
 
 h5 {
@@ -512,25 +573,25 @@ h6 {
 }
 
 a {
-  color: #4a4a4a;
+  color: #3a4145;
   transition: color ease 0.3s;
 }
 
 a:hover {
-  color: #57A3E8;
+  color: #e64b17;
 }
 
-h1 a, h2 a, h3 a,
-h4 a, h5 a, h6 a {
-  color: #50585D;
-}
-
-p, ul, ol, dl {
+p,
+ul,
+ol,
+dl {
   margin: 1.6em 0;
 }
 
-ol ol, ul ul,
-ul ol, ol ul {
+ol ol,
+ul ul,
+ul ol,
+ol ul {
   margin: 0.4em 0;
 }
 
@@ -563,9 +624,14 @@ hr {
 blockquote {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 1.6em 0 1.6em -2.2em;
-  padding: 0 0 0 1.6em;
-  border-left: #4a4a4a 0.4em solid;
+  margin: 1.6em 0 1.6em -1.2em;
+  padding: .1em 0 .1em 1.15em;
+  border-left: 0.15em solid #e64b17;
+}
+@media only screen and (max-width: 900px) {
+  blockquote {
+    margin-left: 0;
+  }
 }
 
 blockquote p {
@@ -743,7 +809,25 @@ margin on the iframe, cause it breaks stuff. */
   color: #fff;
   text-align: center;
 }
+@media only screen and (max-width: 900px) {
+  .site-head {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15% 0;
+    min-height: 240px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .site-head {
+    padding: 10% 0;
+  }
+}
 
+/*
+   Blog
+   ========================================================================== */
 .blog-logo {
   text-decoration: none;
 }
@@ -756,6 +840,11 @@ margin on the iframe, cause it breaks stuff. */
   width: auto;
   line-height: 0;
 }
+@media only screen and (max-width: 500px) {
+  .blog-logo img {
+    max-height: 80px;
+  }
+}
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
@@ -763,8 +852,18 @@ margin on the iframe, cause it breaks stuff. */
   letter-spacing: -1px;
   font-weight: bold;
   font-size: 5rem;
-  font-family: 'Open Sans', sans-serif;
-  /*text-shadow: 0 1px 6px rgba(0,0,0,0.1);*/
+  font-family: "Open Sans", sans-serif;
+}
+@media only screen and (max-width: 900px) {
+  .blog-title {
+    letter-spacing: -1px;
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blog-title {
+    font-size: 3rem;
+  }
 }
 
 .blog-description {
@@ -773,10 +872,24 @@ margin on the iframe, cause it breaks stuff. */
   letter-spacing: 0;
   font-weight: 300;
   font-size: 1.8rem;
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   line-height: 1.5em;
 }
+@media only screen and (max-width: 900px) {
+  .blog-description {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blog-description {
+    font-size: 1.5rem;
+  }
+}
 
+/*
+   Post item
+   ========================================================================== */
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
   position: relative;
@@ -784,9 +897,24 @@ margin on the iframe, cause it breaks stuff. */
   padding-bottom: 4rem;
   max-width: 700px;
   width: 80%;
-  border-bottom: #EBF2F6 1px solid;
+  border-bottom: #ebf2f6 1px solid;
   word-break: break-word;
   hyphens: auto;
+}
+@media only screen and (max-width: 900px) {
+  .post {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .post {
+    margin-right: 16px;
+    margin-left: 16px;
+    width: auto;
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -825,13 +953,18 @@ margin on the iframe, cause it breaks stuff. */
 .post-meta {
   display: inline-block;
   margin: 0 0 5px 0;
-  color: #9EABB3;
+  color: #9eabb3;
   font-size: 1.5rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .post-meta {
+    font-size: 1.3rem;
+  }
 }
 
 .post-meta a {
-  color: #9EABB3;
+  color: #9eabb3;
   text-decoration: none;
 }
 
@@ -839,6 +972,9 @@ margin on the iframe, cause it breaks stuff. */
   text-decoration: underline;
 }
 
+/*
+   User
+   ========================================================================== */
 .user-meta {
   position: relative;
   padding: 0.3rem 40px 0 100px;
@@ -863,6 +999,9 @@ margin on the iframe, cause it breaks stuff. */
   line-height: 1.5em;
 }
 
+/*
+   Publish
+   ========================================================================== */
 .publish-meta {
   position: absolute;
   top: 0;
@@ -885,11 +1024,24 @@ margin on the iframe, cause it breaks stuff. */
 /* ==========================================================================
    Single Post - When you click on an individual post
    ========================================================================== */
+/*
+   Post Template
+   ========================================================================== */
 /* Tweak the .post wrapper style */
 .post-template .post {
   margin-top: 0;
   padding-bottom: 0;
   border-bottom: none;
+}
+@media only screen and (max-width: 900px) {
+  .post-template .post {
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .post-template .post {
+    padding-bottom: 0;
+  }
 }
 
 /* Kill that stylish little circle that was on the border, too */
@@ -901,6 +1053,16 @@ margin on the iframe, cause it breaks stuff. */
 .post-template .post-header {
   padding: 60px 0;
   text-align: center;
+}
+@media only screen and (max-width: 900px) {
+  .post-template .post-header {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .post-template .post-header {
+    padding: 30px 0;
+  }
 }
 
 .post-template .blog-title {
@@ -916,12 +1078,21 @@ margin on the iframe, cause it breaks stuff. */
   height: auto;
 }
 
+/*
+   Post Footer
+   ========================================================================== */
 /* The author credit area after the post */
 .post-footer {
   position: relative;
   margin: 4rem 0 0 0;
   padding: 4rem 0 0 0;
-  border-top: #EBF2F6 1px solid;
+  border-top: #ebf2f6 1px solid;
+}
+@media only screen and (max-width: 500px) {
+  .post-footer {
+    padding: 4rem 0;
+    text-align: center;
+  }
 }
 
 .post-footer h4 {
@@ -939,6 +1110,13 @@ margin on the iframe, cause it breaks stuff. */
 .post-footer .author {
   margin-right: 180px;
 }
+@media only screen and (max-width: 500px) {
+  .post-footer .author {
+    margin: 0 0 2rem 0;
+    padding: 0 0 1.6rem 0;
+    border-bottom: #ebf2f6 1px dashed;
+  }
+}
 
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
@@ -951,17 +1129,29 @@ margin on the iframe, cause it breaks stuff. */
   width: 140px;
   text-align: right;
 }
+@media only screen and (max-width: 500px) {
+  .post-footer .share {
+    position: static;
+    width: auto;
+    text-align: center;
+  }
+}
 
 .post-footer .share a {
   display: inline-block;
   margin: 1.4rem 1.6rem 1.6rem 0;
-  color: #BBC7CC;
+  color: #bbc7cc;
   text-decoration: none;
   font-size: 1.8rem;
 }
+@media only screen and (max-width: 500px) {
+  .post-footer .share a {
+    margin: 1.4rem 0.8rem 0 0.8rem;
+  }
+}
 
 .post-footer .share a:hover {
-  color: #50585D;
+  color: #50636b;
 }
 
 .post-footer .share .icon-twitter:hover {
@@ -995,14 +1185,21 @@ margin on the iframe, cause it breaks stuff. */
   margin: 4rem auto;
   max-width: 700px;
   width: 80%;
-  color: #9EABB3;
+  color: #9eabb3;
   text-align: center;
   font-size: 1.3rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .pagination {
+    margin-right: 16px;
+    margin-left: 16px;
+    width: auto;
+  }
 }
 
 .pagination a {
-  color: #9EABB3;
+  color: #9eabb3;
 }
 
 /* Push the previous/next links out to the left/right */
@@ -1011,28 +1208,39 @@ margin on the iframe, cause it breaks stuff. */
   position: absolute;
   display: inline-block;
   padding: 0 15px;
-  border: #EBF2F6 2px solid;
+  border: #ebf2f6 2px solid;
   border-radius: 30px;
   text-decoration: none;
   transition: border ease 0.3s;
+}
+@media only screen and (max-width: 500px) {
+  .older-posts,
+  .newer-posts {
+    position: static;
+    margin: 10px 0;
+  }
+}
+.older-posts:hover,
+.newer-posts:hover {
+  border-color: #9eabb3;
 }
 
 .older-posts {
   right: 0;
 }
 
-.page-number {
-  display: inline-block;
-  padding: 2px 0;
-}
-
 .newer-posts {
   left: 0;
 }
 
-.older-posts:hover,
-.newer-posts:hover {
-  border-color: #9EABB3;
+.page-number {
+  display: inline-block;
+  padding: 2px 0;
+}
+@media only screen and (max-width: 500px) {
+  .page-number {
+    display: block;
+  }
 }
 
 /* ==========================================================================
@@ -1042,29 +1250,33 @@ margin on the iframe, cause it breaks stuff. */
   position: relative;
   margin: 8rem 0 0 0;
   padding: 4rem 0;
-  border-top: #EBF2F6 1px solid;
+  border-top: #ebf2f6 1px solid;
   background: #F7FAFB;
-  color: #BBC7CC;
+  color: #bbc7cc;
   text-align: center;
   font-size: 1.3rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.7em;
+}
+@media only screen and (max-width: 500px) {
+  .site-footer {
+    margin-top: 6rem;
+    font-size: 1.1rem;
+  }
 }
 
 .site-footer a {
-  color: #BBC7CC;
+  color: #bbc7cc;
   text-decoration: underline;
 }
-
 .site-footer a:hover {
-  color: #50585D;
+  color: #50636b;
 }
 
 .poweredby .icon-ghost {
   text-decoration: none;
   font-weight: 700;
 }
-
 .poweredby .icon-ghost:hover {
   text-decoration: none;
 }
@@ -1082,7 +1294,7 @@ margin on the iframe, cause it breaks stuff. */
   margin-left: -15px;
   width: 28px;
   height: 28px;
-  border: #EBF2F6 1px solid;
+  border: #ebf2f6 1px solid;
   border-radius: 50px;
   background: #fff;
   text-align: center;
@@ -1108,7 +1320,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .subscribe:hover:before {
-  color: #50585D;
+  color: #50636b;
 }
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
@@ -1119,7 +1331,7 @@ margin on the iframe, cause it breaks stuff. */
   display: inline-block;
   padding: 4px 8px 5px 8px;
   border-radius: 20px;
-  background: #50585D;
+  background: #50636b;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
@@ -1140,7 +1352,7 @@ margin on the iframe, cause it breaks stuff. */
   width: 0;
   border-width: 5px 5px 0 5px;
   border-style: solid;
-  border-color: #50585D transparent;
+  border-color: #50636b transparent;
   content: "";
 }
 
@@ -1149,162 +1361,3 @@ margin on the iframe, cause it breaks stuff. */
   top: -33px;
   opacity: 1;
 }
-
-/* ==========================================================================
-   9. Media Queries - Smaller than 900px
-   ========================================================================== */
-@media only screen and (max-width: 900px) {
-  blockquote {
-    margin-left: 0;
-  }
-
-  .site-head {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 15% 0;
-    min-height: 240px;
-    height: auto;
-  }
-
-  .blog-title {
-    letter-spacing: -1px;
-    font-size: 4rem;
-  }
-
-  .blog-description {
-    font-size: 1.7rem;
-    line-height: 1.5em;
-  }
-
-  .post {
-    font-size: 0.9em;
-    line-height: 1.6em;
-  }
-
-  .post-template .post {
-    padding-bottom: 1rem;
-  }
-
-  .post-template .post-header {
-    padding: 40px 0;
-  }
-
-  h1 {
-    text-indent: -2px;
-    font-size: 4.8rem;
-  }
-
-  h2 {
-    font-size: 3.8rem;
-  }
-
-  h3 {
-    font-size: 3.3rem;
-  }
-
-  h4 {
-    font-size: 2.8rem;
-  }
-}
-/* ==========================================================================
-   10. Media Queries - Smaller than 500px
-   ========================================================================== */
-@media only screen and (max-width: 500px) {
-  .blog-logo img {
-    max-height: 80px;
-  }
-
-  .inner,
-  .pagination {
-    margin-right: 16px;
-    margin-left: 16px;
-    width: auto;
-  }
-
-  .post {
-    margin-right: 16px;
-    margin-left: 16px;
-    width: auto;
-    font-size: 0.8em;
-    line-height: 1.6em;
-  }
-
-  .site-head {
-    padding: 10% 0;
-  }
-
-  .blog-title {
-    font-size: 3rem;
-  }
-
-  .blog-description {
-    font-size: 1.5rem;
-  }
-
-  h1, h2 {
-    letter-spacing: -1px;
-    font-size: 3rem;
-    line-height: 1.1em;
-  }
-
-  h3 {
-    font-size: 2.8rem;
-  }
-
-  h4 {
-    font-size: 2.3rem;
-  }
-
-  .post-template .post {
-    padding-bottom: 0;
-  }
-
-  .post-template .post-header {
-    padding: 30px 0;
-  }
-
-  .post-meta {
-    font-size: 1.3rem;
-  }
-
-  .post-footer {
-    padding: 4rem 0;
-    text-align: center;
-  }
-
-  .post-footer .author {
-    margin: 0 0 2rem 0;
-    padding: 0 0 1.6rem 0;
-    border-bottom: #EBF2F6 1px dashed;
-  }
-
-  .post-footer .share {
-    position: static;
-    width: auto;
-    text-align: center;
-  }
-
-  .post-footer .share a {
-    margin: 1.4rem 0.8rem 0 0.8rem;
-  }
-
-  .older-posts,
-  .newer-posts {
-    position: static;
-    margin: 10px 0;
-  }
-
-  .page-number {
-    display: block;
-  }
-
-  .site-footer {
-    margin-top: 6rem;
-    font-size: 1.1rem;
-  }
-}
-/* ==========================================================================
-   End of file. Media queries should be the last thing here. Do not add stuff
-   below this point, or it will probably fuck everything up.
-   ========================================================================== */

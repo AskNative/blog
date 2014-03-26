@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Settings — Variables for the whole theme
+   ========================================================================== */
+
+/**
+ * Media queries
+ */
+
+$screen-lg: 900px;
+$screen-sm: 500px;
+
+/**
+ * Colors
+ */
+
+/* Main colors */
+$color-text:              #3A4145;
+$color-selection:         #D6EDFF;
+$color-meta:              #9EABB3;
+
+$color-gray-lighter:      #EFEFEF;
+$color-gray-light:        #EBF2F6;
+$color-gray:              #4A4A4A;
+$color-gray-dark:         #303538;
+
+$color-primary:           #E64B17;
+// $gray-darker:            lighten(#000, 13.5%) !default; // #222
+// $gray-dark:              lighten(#000, 20%) !default;   // #333
+// $gray:                   lighten(#000, 33.5%) !default; // #555
+// $gray-light:             lighten(#000, 60%) !default;   // #999
+// $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+/* Footer colors */
+$color-footer-text:       #BBC7CC;
+$color-footer-text-hover: darken($color-footer-text, 40%); // #50585D
+
+/* Misc colors */
+$color-twitter:           rgb(58, 172, 238);
+$color-facebook:          rgb(59, 89, 152);
+
+/**
+ * Typography
+ */
+
+$font-family-sans-serif:  'Open Sans', sans-serif; // !default;
+$font-family-serif:       'Noto Serif', serif; // !default;
+$font-family-monospace:   Inconsolata, monospace, sans-serif; // !default;

@@ -2,11 +2,18 @@
    Single Post - When you click on an individual post
    ========================================================================== */
 
+/*
+   Post Template
+   ========================================================================== */
+
 /* Tweak the .post wrapper style */
 .post-template .post {
   margin-top: 0;
   padding-bottom: 0;
   border-bottom: none;
+
+  @include screen-lg { padding-bottom: 1rem; }
+  @include screen-sm { padding-bottom: 0; }
 }
 
 /* Kill that stylish little circle that was on the border, too */
@@ -18,6 +25,9 @@
 .post-template .post-header {
   padding: 60px 0;
   text-align: center;
+
+  @include screen-lg { padding: 40px 0; }
+  @include screen-sm { padding: 30px 0; }
 }
 
 .post-template .blog-title {
@@ -33,12 +43,21 @@
   height: auto;
 }
 
+/*
+   Post Footer
+   ========================================================================== */
+
 /* The author credit area after the post */
 .post-footer {
   position: relative;
   margin: 4rem 0 0 0;
   padding: 4rem 0 0 0;
-  border-top: #EBF2F6 1px solid;
+  border-top: $color-gray-light 1px solid;
+
+  @include screen-sm {
+    padding: 4rem 0;
+    text-align: center;
+  }
 }
 
 .post-footer h4 {
@@ -55,6 +74,12 @@
 /* Create some space to the right for the share links */
 .post-footer .author {
   margin-right: 180px;
+
+  @include screen-sm {
+    margin: 0 0 2rem 0;
+    padding: 0 0 1.6rem 0;
+    border-bottom: $color-gray-light 1px dashed;
+  }
 }
 
 /* Drop the share links in the space to the right.
@@ -67,24 +92,34 @@
   right: 0;
   width: 140px;
   text-align: right;
+
+  @include screen-sm {
+    position: static;
+    width: auto;
+    text-align: center;
+  }
 }
 
 .post-footer .share a {
   display: inline-block;
   margin: 1.4rem 1.6rem 1.6rem 0;
-  color: #BBC7CC;
+  color: $color-footer-text;
   text-decoration: none;
   font-size: 1.8rem;
+
+  @include screen-sm {
+    margin: 1.4rem 0.8rem 0 0.8rem;
+  }
 }
 
 .post-footer .share a:hover {
-  color: #50585D;
+  color: $color-footer-text-hover;
 }
 
 .post-footer .share .icon-twitter:hover {
-  color: rgb(58, 172, 238);
+  color: $color-twitter;
 }
 
 .post-footer .share .icon-facebook:hover {
-  color: rgb(59, 89, 152);
+  color: $color-facebook;
 }

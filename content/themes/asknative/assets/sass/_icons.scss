@@ -33,19 +33,11 @@
 
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-  content: "\e000";
-}
-.icon-feed:before {
-  content: "\e001";
-}
+.icon-ghost:before        { content: "\e000"; }
+.icon-feed:before         { content: "\e001"; }
+.icon-google-plus:before  { content: "\e003"; }
+.icon-facebook:before     { content: "\e004"; }
 .icon-twitter:before {
   content: "\e002";
   font-size: 1.1em;
-}
-.icon-google-plus:before {
-  content: "\e003";
-}
-.icon-facebook:before {
-  content: "\e004";
 }

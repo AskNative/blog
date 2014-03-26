@@ -1,5 +1,5 @@
 /* ==========================================================================
-   3. General - Setting up some base styles
+   General - Setting up some base styles
    ========================================================================== */
 
 html {
@@ -11,20 +11,20 @@ html {
 body {
   max-height: 100%;
   height: 100%;
-  color: #3A4145;
+  color: $color-text;
   font-size: 2.0rem;
-  font-family: 'Noto Serif', serif;
+  font-family: $font-family-serif;
   line-height: 1.6em;
 }
 
 ::-moz-selection {
-  background: #D6EDFF;
+  background: $color-selection;
   color: #222;
   text-shadow: none;
 }
 
 ::selection {
-  background: #D6EDFF;
+  background: $color-selection;
   color: #222;
   text-shadow: none;
 }
@@ -32,9 +32,11 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
   margin-top: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-family-sans-serif;
   line-height: 1;
   text-rendering: optimizeLegibility;
+
+  a { color: $color-footer-text-hover; }
 }
 
 h1 {
@@ -42,6 +44,17 @@ h1 {
   letter-spacing: -2px;
   font-size: 5rem;
   line-height: 1.2em;
+
+  @include screen-lg {
+    text-indent: -2px;
+    font-size: 4.8rem;
+  }
+
+  @include screen-sm {
+    letter-spacing: -1px;
+    font-size: 3rem;
+    line-height: 1.1em;
+  }
 }
 
 h2 {
@@ -49,45 +62,49 @@ h2 {
   letter-spacing: -1px;
   font-size: 4rem;
   line-height: 1.2em;
+
+  @include screen-lg { font-size: 3.8rem; }
+
+  @include screen-sm {
+    letter-spacing: -1px;
+    font-size: 3rem;
+    line-height: 1.1em;
+  }
 }
 
 h3 {
   font-size: 3.5rem;
+  @include screen-lg { font-size: 3.3rem; }
+  @include screen-sm { font-size: 2.8rem; }
 }
 
 h4 {
   font-size: 3rem;
+  @include screen-lg { font-size: 2.8rem; }
+  @include screen-sm { font-size: 2.3rem; }
 }
 
-h5 {
-  font-size: 2.5rem;
-}
-
-h6 {
-  font-size: 2rem;
-}
+h5 { font-size: 2.5rem; }
+h6 { font-size: 2rem; }
 
 a {
-  color: #4a4a4a;
+  color: $color-text;
   transition: color ease 0.3s;
 }
 
-a:hover {
-  color: #57A3E8;
-}
+a:hover { color: $color-primary; }
 
-h1 a, h2 a, h3 a,
-h4 a, h5 a, h6 a {
-  color: #50585D;
-}
-
-
-p, ul, ol, dl {
+p,
+ul,
+ol,
+dl {
   margin: 1.6em 0;
 }
 
-ol ol, ul ul,
-ul ol, ol ul {
+ol ol,
+ul ul,
+ul ol,
+ol ul {
   margin: 0.4em 0;
 }
 
@@ -114,15 +131,18 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid $color-gray-lighter;
 }
 
 blockquote {
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.6em 0 1.6em -2.2em;
-  padding: 0 0 0 1.6em;
-  border-left: #4a4a4a 0.4em solid;
+       box-sizing: border-box;
+
+  margin: 1.6em 0 1.6em -1.2em;
+  padding: .1em 0 .1em 1.15em;
+  border-left: .15em solid $color-primary;
+
+  @include screen-lg { margin-left: 0; }
 }
 
 blockquote p {
@@ -139,15 +159,11 @@ blockquote small {
 
 blockquote small:before { content: '\2014 \00A0'; }
 
-blockquote cite {
-  font-weight:bold;
-}
+blockquote cite { font-weight: bold; }
 
 blockquote cite a { font-weight: normal; }
 
-mark {
-  background-color: #ffc336;
-}
+mark { background-color: #ffc336; }
 
 code, tt {
   padding: 1px 3px;
@@ -156,7 +172,7 @@ code, tt {
   background: #F7FAFB;
   white-space: pre-wrap;
   font-size: 0.85em;
-  font-family: Inconsolata, monospace, sans-serif;
+  font-family: $font-family-monospace;
 }
 
 pre {
@@ -171,7 +187,7 @@ pre {
   background: #F7FAFB;
   white-space: pre;
   font-size: 0.9em;
-  font-family: Inconsolata, monospace, sans-serif;
+  font-family: $font-family-monospace;
 }
 
 pre code, tt {
@@ -211,7 +227,7 @@ table {
 table th,
 table td {
   padding: 8px;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid $color-gray-lighter;
   vertical-align: top;
   text-align: left;
   line-height: 20px;
@@ -228,7 +244,7 @@ table thead:first-child tr:first-child td {
   border-top: 0;
 }
 
-table tbody + tbody { border-top: 2px solid #efefef; }
+table tbody + tbody { border-top: 2px solid $color-gray-lighter; }
 
 table table table { background-color: #fff; }
 
