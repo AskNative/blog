@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin screen-sm {
+  @media only screen and (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media only screen and (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+// @include screen-sm {
+//   background: url('/assets/images/masterhead.jpg') no-repeat center bottom fixed;
+// }

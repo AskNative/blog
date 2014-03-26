@@ -1,21 +1,15 @@
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
+/**
+ * Variables
+ */
 
-/*
+@import "globals/settings";
+@import "globals/mixins";
 
-    0.  Includes
-    1.  Icons
-    2.  General
-    3.  Utilities
-    4.  General
-    5.  Single Post
-    6.  Third Party Elements
-    7.  Pagination
-    8.  Footer
-    9.  Media Queries (Tablet)
-    10. Media Queries (Mobile)
-
+/**
+ * Import
  */
 
 @import "vendor/normalize";
@@ -34,24 +28,6 @@
    9. Media Queries - Smaller than 900px
    ========================================================================== */
 
-$screen-lg: 900px;
-$screen-sm: 500px;
-
-// @mixin screen-sm {
-//   @media only screen and (max-width: $screen-sm) {
-//     @content;
-//   }
-// }
-
-// @mixin screen-lg {
-//   @media only screen and (max-width: $screen-lg) {
-//     @content;
-//   }
-// }
-
-// @include screen-sm {
-//   background: url('/assets/images/masterhead.jpg') no-repeat center bottom fixed;
-// }
 
 @media only screen and (max-width: $screen-lg) {
 
