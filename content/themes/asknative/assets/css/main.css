@@ -425,18 +425,6 @@ body {
   line-height: 1.6em;
 }
 
-::-moz-selection {
-  background: #d6edff;
-  color: #222;
-  text-shadow: none;
-}
-
-::selection {
-  background: #d6edff;
-  color: #222;
-  text-shadow: none;
-}
-
 h1, h2, h3,
 h4, h5, h6 {
   margin-top: 0;
