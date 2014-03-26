@@ -1,6 +1,32 @@
 /* ==========================================================================
-   Table of Contents
+   Main CSS
    ========================================================================== */
+/* Core variables and mixins */
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/**
+ * Media queries
+ */
+/**
+ * Colors
+ */
+/* Main colors */
+/* Footer colors */
+/* Misc colors */
+/**
+ * Typography
+ */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/**
+ * Media Queries mixin - Smaller than 500px
+ */
+/**
+ * Media Query mixin - Smaller than 900px
+ */
+/* Reset */
 /* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -379,84 +405,9 @@ table {
   border-spacing: 0;
 }
 
+/* Core CSS */
 /* ==========================================================================
-   Settings — Variables for the whole theme
-   ========================================================================== */
-/**
- * Media queries
- */
-/**
- * Colors
- */
-/* Main colors */
-/* Footer colors */
-/* Misc colors */
-/**
- * Typography
- */
-/* ==========================================================================
-   Mixins
-   ========================================================================== */
-/**
- * Media Queries mixin - Smaller than 500px
- */
-/**
- * Media Query mixin - Smaller than 900px
- */
-/* ==========================================================================
-   Icons - Sets up the icon font and respective classes
-   ========================================================================== */
-/* Import the font file with the icons in it */
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'icons';
-  src: url("../fonts/icons.eot");
-  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
-}
-
-/* Apply these base styles to all icons */
-.icon-ghost:before,
-.icon-feed:before,
-.icon-twitter:before,
-.icon-google-plus:before,
-.icon-facebook:before {
-  text-decoration: none;
-  text-transform: none;
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-family: 'icons';
-  line-height: 1;
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Each icon is created by inserting the corret character into the
-   content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-  content: "\e000";
-}
-
-.icon-feed:before {
-  content: "\e001";
-}
-
-.icon-google-plus:before {
-  content: "\e003";
-}
-
-.icon-facebook:before {
-  content: "\e004";
-}
-
-.icon-twitter:before {
-  content: "\e002";
-  font-size: 1.1em;
-}
-
-/* ==========================================================================
-   General - Setting up some base styles
+   Base - Setting up some base styles
    ========================================================================== */
 html {
   max-height: 100%;
@@ -666,7 +617,7 @@ code, tt {
   padding: 1px 3px;
   border: 1px solid #E3EDF3;
   border-radius: 2px;
-  background: #F7FAFB;
+  background: #f7fafb;
   white-space: pre-wrap;
   font-size: 0.85em;
   font-family: Inconsolata, monospace, sans-serif;
@@ -681,7 +632,7 @@ pre {
   width: 100%;
   border: 1px solid #E3EDF3;
   border-radius: 3px;
-  background: #F7FAFB;
+  background: #f7fafb;
   white-space: pre;
   font-size: 0.9em;
   font-family: Inconsolata, monospace, sans-serif;
@@ -771,31 +722,62 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* ==========================================================================
-   Utilities - These things get used a lot
+   Icons - Sets up the icon font and respective classes
    ========================================================================== */
-/* Hides shit */
-.hidden {
-  display: none;
-  visibility: hidden;
-  text-indent: -9999px;
+/* Import the font file with the icons in it */
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'icons';
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
 }
 
-/* Creates a responsive wrapper that makes our content scale nicely */
-.inner {
-  position: relative;
-  margin: 0 auto;
-  max-width: 700px;
-  width: 80%;
+/* Apply these base styles to all icons */
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
+.icon-google-plus:before,
+.icon-facebook:before {
+  text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'icons';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Centres vertically yo. (IE8+) */
-.vertical {
-  display: table-cell;
-  vertical-align: middle;
+/* Each icon is created by inserting the corret character into the
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+  content: "\e000";
+}
+
+.icon-feed:before {
+  content: "\e001";
+}
+
+.icon-google-plus:before {
+  content: "\e003";
+}
+
+.icon-facebook:before {
+  content: "\e004";
+}
+
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em;
 }
 
 /* ==========================================================================
-   Theme - The main styles for the the theme
+   Site
+   ========================================================================== */
+/*
+   Site header
    ========================================================================== */
 /* Big cover image on the home page */
 .site-head {
@@ -826,7 +808,40 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /*
+   Site footer
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  margin: 8rem 0 0 0;
+  padding: 4rem 0;
+  border-top: #ebf2f6 1px solid;
+  background: #f7fafb;
+  color: #bbc7cc;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7em;
+}
+@media only screen and (max-width: 500px) {
+  .site-footer {
+    margin-top: 6rem;
+    font-size: 1.1rem;
+  }
+}
+
+.site-footer a {
+  color: #bbc7cc;
+  text-decoration: underline;
+}
+.site-footer a:hover {
+  color: #50636b;
+}
+
+/* ==========================================================================
    Blog
+   ========================================================================== */
+/*
+   Blog logo
    ========================================================================== */
 .blog-logo {
   text-decoration: none;
@@ -846,6 +861,9 @@ margin on the iframe, cause it breaks stuff. */
   }
 }
 
+/*
+   Blog title
+   ========================================================================== */
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
   margin: 10px 0 10px 0;
@@ -866,6 +884,9 @@ margin on the iframe, cause it breaks stuff. */
   }
 }
 
+/*
+   Blog description
+   ========================================================================== */
 .blog-description {
   margin: 0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
@@ -887,6 +908,9 @@ margin on the iframe, cause it breaks stuff. */
   }
 }
 
+/* ==========================================================================
+   Single Post - When you click on an individual post
+   ========================================================================== */
 /*
    Post item
    ========================================================================== */
@@ -936,6 +960,9 @@ margin on the iframe, cause it breaks stuff. */
   content: "";
 }
 
+/*
+   Post title
+   ========================================================================== */
 .post-title {
   margin: 0;
 }
@@ -950,6 +977,9 @@ margin on the iframe, cause it breaks stuff. */
   line-height: 1.6em;
 }
 
+/*
+   Post meta
+   ========================================================================== */
 .post-meta {
   display: inline-block;
   margin: 0 0 5px 0;
@@ -972,58 +1002,6 @@ margin on the iframe, cause it breaks stuff. */
   text-decoration: underline;
 }
 
-/*
-   User
-   ========================================================================== */
-.user-meta {
-  position: relative;
-  padding: 0.3rem 40px 0 100px;
-  min-height: 77px;
-}
-
-.user-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.user-name {
-  display: block;
-  font-weight: bold;
-}
-
-.user-bio {
-  display: block;
-  max-width: 440px;
-  font-size: 1.4rem;
-  line-height: 1.5em;
-}
-
-/*
-   Publish
-   ========================================================================== */
-.publish-meta {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4.3rem 0 4rem 0;
-  text-align: right;
-}
-
-.publish-heading {
-  display: block;
-  font-weight: bold;
-}
-
-.publish-date {
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1.5em;
-}
-
-/* ==========================================================================
-   Single Post - When you click on an individual post
-   ========================================================================== */
 /*
    Post Template
    ========================================================================== */
@@ -1070,6 +1048,9 @@ margin on the iframe, cause it breaks stuff. */
   padding: 2.5rem 0;
 }
 
+/*
+   Post content
+   ========================================================================== */
 /* Keep large images within the bounds of the post-width */
 .post-content img {
   display: block;
@@ -1079,7 +1060,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /*
-   Post Footer
+   Post footer
    ========================================================================== */
 /* The author credit area after the post */
 .post-footer {
@@ -1163,17 +1144,52 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* ==========================================================================
-   Third Party Elements - Embeds from other services
+   User
    ========================================================================== */
-/* Github */
-.gist table {
-  margin: 0;
-  font-size: 1.4rem;
+.user-meta {
+  position: relative;
+  padding: 0.3rem 40px 0 100px;
+  min-height: 77px;
 }
 
-.gist .line-number {
-  min-width: 25px;
-  font-size: 1.1rem;
+.user-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-name {
+  display: block;
+  font-weight: bold;
+}
+
+.user-bio {
+  display: block;
+  max-width: 440px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+
+/* ==========================================================================
+   Publish
+   ========================================================================== */
+.publish-meta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4.3rem 0 4rem 0;
+  text-align: right;
+}
+
+.publish-heading {
+  display: block;
+  font-weight: bold;
+}
+
+.publish-date {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5em;
 }
 
 /* ==========================================================================
@@ -1202,6 +1218,9 @@ margin on the iframe, cause it breaks stuff. */
   color: #9eabb3;
 }
 
+/*
+   Older/Newer posts
+   ========================================================================== */
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
@@ -1233,6 +1252,9 @@ margin on the iframe, cause it breaks stuff. */
   left: 0;
 }
 
+/*
+   Page number
+   ========================================================================== */
 .page-number {
   display: inline-block;
   padding: 2px 0;
@@ -1246,33 +1268,6 @@ margin on the iframe, cause it breaks stuff. */
 /* ==========================================================================
    Footer - The bottom of every page
    ========================================================================== */
-.site-footer {
-  position: relative;
-  margin: 8rem 0 0 0;
-  padding: 4rem 0;
-  border-top: #ebf2f6 1px solid;
-  background: #F7FAFB;
-  color: #bbc7cc;
-  text-align: center;
-  font-size: 1.3rem;
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.7em;
-}
-@media only screen and (max-width: 500px) {
-  .site-footer {
-    margin-top: 6rem;
-    font-size: 1.1rem;
-  }
-}
-
-.site-footer a {
-  color: #bbc7cc;
-  text-decoration: underline;
-}
-.site-footer a:hover {
-  color: #50636b;
-}
-
 .poweredby .icon-ghost {
   text-decoration: none;
   font-weight: 700;
@@ -1315,7 +1310,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Add a box shadow to on hover */
 .subscribe:hover {
-  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 3px;
   transition: box-shadow 0.25s;
 }
 
@@ -1332,7 +1327,7 @@ margin on the iframe, cause it breaks stuff. */
   padding: 4px 8px 5px 8px;
   border-radius: 20px;
   background: #50636b;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
   font-size: 1.1rem;
@@ -1360,4 +1355,43 @@ margin on the iframe, cause it breaks stuff. */
 .subscribe:hover .tooltip {
   top: -33px;
   opacity: 1;
+}
+
+/* Utility classes */
+/* ==========================================================================
+   Utilities - These things get used a lot
+   ========================================================================== */
+/* Hides shit */
+.hidden {
+  display: none;
+  visibility: hidden;
+  text-indent: -9999px;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+  position: relative;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 80%;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Third Party Elements - Embeds from other services
+   ========================================================================== */
+/* Github */
+.gist table {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.gist .line-number {
+  min-width: 25px;
+  font-size: 1.1rem;
 }

@@ -169,7 +169,7 @@ code, tt {
   padding: 1px 3px;
   border: 1px solid #E3EDF3;
   border-radius: 2px;
-  background: #F7FAFB;
+  background: $color-gray-lightest;
   white-space: pre-wrap;
   font-size: 0.85em;
   font-family: $font-family-monospace;
@@ -184,7 +184,7 @@ pre {
   width: 100%;
   border: 1px solid #E3EDF3;
   border-radius: 3px;
-  background: #F7FAFB;
+  background: $color-gray-lightest;
   white-space: pre;
   font-size: 0.9em;
   font-family: $font-family-monospace;

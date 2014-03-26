@@ -17,18 +17,21 @@ $screen-sm: 500px;
 $color-text:              #3A4145;
 $color-selection:         #D6EDFF;
 $color-meta:              #9EABB3;
+$color-shadow:            rgba(0,0,0,0.15);
 
-$color-gray-lighter:      #EFEFEF;
+$color-gray-lightest:     #F7FAFB; // Footer bg
+$color-gray-lighter:      #EFEFEF; // Darkened version of lightest
 $color-gray-light:        #EBF2F6;
 $color-gray:              #4A4A4A;
-$color-gray-dark:         #303538;
+$color-gray-dark:         #303538; // Cover bg
 
-$color-primary:           #E64B17;
 // $gray-darker:            lighten(#000, 13.5%) !default; // #222
 // $gray-dark:              lighten(#000, 20%) !default;   // #333
 // $gray:                   lighten(#000, 33.5%) !default; // #555
 // $gray-light:             lighten(#000, 60%) !default;   // #999
 // $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+$color-primary:           #E64B17;
 
 /* Footer colors */
 $color-footer-text:       #BBC7CC;

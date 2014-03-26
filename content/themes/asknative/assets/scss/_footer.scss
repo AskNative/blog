@@ -9,7 +9,6 @@
   &:hover { text-decoration: none; }
 }
 
-
 .poweredby .icon-ghost:before {
   margin-right: 0.2em;
   font-size: 1rem;
@@ -44,7 +43,7 @@
 
 /* Add a box shadow to on hover */
 .subscribe:hover {
-  box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
+  box-shadow: $color-shadow 0 0 0 3px;
   transition: box-shadow 0.25s;
 }
 
@@ -59,7 +58,7 @@
   padding: 4px 8px 5px 8px;
   border-radius:20px;
   background: $color-footer-text-hover;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px $color-shadow;
   color: rgba(255,255,255,0.9);
   text-align: center;
   font-size: 1.1rem;
