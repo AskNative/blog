@@ -25,3 +25,5 @@ content/themes/asknative/*
 !/content/themes/asknative/
 !/content/themes/asknative/*
 
+
+.DS_Store
