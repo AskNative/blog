@@ -26,6 +26,7 @@
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
   margin: 10px 0 10px 0;
+  text-shadow: 0 1px 3px $color-shadow;
   letter-spacing: -1px;
   font-weight: bold;
   font-size: 5rem;
