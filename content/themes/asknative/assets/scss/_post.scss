@@ -163,7 +163,7 @@
 /* Create some space to the right for the share links */
 .post-footer .author {
   display: flex;
-  margin-right: 180px;
+  margin-right: 100px;
   align-items: flex-start;
 
   @include screen-sm {
