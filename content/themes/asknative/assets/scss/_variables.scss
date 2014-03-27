@@ -10,15 +10,24 @@ $screen-lg:               900px;
 $screen-sm:               500px;
 
 /**
+ * Border Radius
+ */
+
+$border-radius-sm:        2px;
+$border-radius-md:        3px;
+$border-radius-lg:        100px; // Capsule
+
+/**
  * Colors
  */
 
-// $color-gray-darker:    lighten(#000, 13.5%); // #222
-$color-gray-dark:         lighten(#000, 20%);     // #333
-$color-gray:              lighten(#000, 33.5%);   // #555 / #4A4A4A;
-// $color-gray-light:     #EBF2F6;
-$color-gray-light:        lighten(#000, 60%);     // #999
-$color-gray-lighter:      lighten(#000, 93.5%);   // #eee — Mainly for strokes and borders
+$color-base:              #000;
+
+$color-gray-darker:       lighten($color-base, 13.5%);   // #222
+$color-gray-dark:         lighten($color-base, 20%);     // #333
+$color-gray:              lighten($color-base, 33.5%);   // #555
+$color-gray-light:        lighten($color-base, 60%);     // #999
+$color-gray-lighter:      lighten($color-base, 93.5%);   // #eee — Mainly for strokes and borders
 
 /* Main colors */
 $color-text:              #3A4145;
@@ -26,10 +35,6 @@ $color-primary:           #E64B17;
 $color-meta:              $color-gray-light; // #9EABB3;
 $color-shadow:            rgba(0,0,0,.15);
 $color-border:            $color-gray-lighter;
-
-/* Footer colors */
-$color-footer-text:       #BBC7CC;
-$color-footer-text-hover: darken($color-footer-text, 40%); // #50585D
 
 /* Misc colors */
 $color-twitter:           rgb(58,172,238);
@@ -40,9 +45,11 @@ $color-subscribe-shadow:  rgba(0,0,0,.05);
 /* Background colors */
 $body-bg:                 #FFF;
 $cover-bg:                $color-gray-dark;
-$footer-bg:               #F7F7F7; // #F7FAFB;
+$footer-bg:               rgb(253, 247, 238); // #F7F7F7; // #F7FAFB;
 
-// #CCC;
+/* Footer colors */
+$color-footer-text:       darken($footer-bg, 15%); //CCC //#BBC7CC;
+$color-footer-text-hover: rgb(71, 60, 41); //darken($footer-bg, 40%);  // #50585D
 
 /**
  * Typography
@@ -53,63 +60,24 @@ $font-family-serif:       'Noto Serif', serif;
 $font-family-monospace:   Inconsolata, monospace, sans-serif;
 
 $font-size-base:          1rem;
-$font-size-h1:            5rem;
-$font-size-h2:            4rem;
-$font-size-h3:            3.5rem;
-$font-size-h4:            3rem;
-$font-size-h5:            2.5rem;
-$font-size-h6:            2rem;
+$font-size-large:         .2rem;
+// $font-size-small:         2rem;
 
-// h1 {
-//   @include screen-lg { font-size: 4.8rem; }
-//   @include screen-sm { font-size: 3rem; }
-// }
+$font-size-h1:            ($font-size-base * 5);    // 50px
+$font-size-h2:            ($font-size-base * 4);    // 40px
+$font-size-h3:            ($font-size-base * 3.5);  // 35px
+$font-size-h4:            ($font-size-base * 3);    // 30px
+$font-size-h5:            ($font-size-base * 2.5);  // 25px
+$font-size-h6:            ($font-size-base * 2);    // 20px
 
-// h2 {
-//   @include screen-lg { font-size: 3.8rem; }
-//   @include screen-sm { font-size: 3rem; }
-// }
+$font-size-h1-lg:         ($font-size-h1 - $font-size-large); // 48px
+$font-size-h1-sm:         ($font-size-h1 - 2rem);             // 30px
 
-// h3 {
-//   @include screen-lg { font-size: 3.3rem; }
-//   @include screen-sm { font-size: 2.8rem; }
-// }
+$font-size-h2-lg:         ($font-size-h2 - $font-size-large); // 38px
+$font-size-h2-sm:         ($font-size-h2 - $font-size-base);  // 30px
 
-// h4 {
-//   @include screen-lg { font-size: 2.8rem; }
-//   @include screen-sm { font-size: 2.3rem; }
-// }
+$font-size-h3-lg:         ($font-size-h3 - $font-size-large); // 33px
+$font-size-h3-sm:         ($font-size-h3 - $font-size-base);  // 28px
 
-// $font-size-base:          14px !default;
-// $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-// $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
-
-// $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-// $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-// $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-// $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-// $font-size-h5:            $font-size-base !default;
-// $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
-
-// 0.85em
-// 0.9em
-// 1em
-// 1.1rem
-// 1.3rem
-// 1.4rem
-// 1.5rem
-// 1.7rem
-// 1.8rem
-// 2.0rem
-// 2rem
-// 2.3rem
-// 2.5rem
-// 2.8rem
-// 3rem
-// 3.3rem
-// 3.5rem
-// 3.8rem
-// 4rem
-// 4.8rem
-// 5rem
-// 10px
+$font-size-h4-lg:         ($font-size-h4 - $font-size-large); // 28px
+$font-size-h4-sm:         ($font-size-h4 - .7rem);            // 23px

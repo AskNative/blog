@@ -23,11 +23,11 @@
   width: 28px;
   height: 28px;
   border: $color-border 1px solid;
-  border-radius: 50px;
   background: #fff;
   text-align: center;
   line-height: 2.4rem;
   transition: box-shadow 0.5s;
+  @include border-radius($border-radius-lg);
 }
 
 /* The RSS icon, inserted via icon font */
@@ -51,20 +51,20 @@
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
 .tooltip {
-  position:absolute;
+  position: absolute;
   top: -23px;
   left: -21px;
   display: inline-block;
   padding: 4px 8px 5px 8px;
-  border-radius:20px;
   background: $color-footer-text-hover;
   box-shadow: 0 1px 4px $color-shadow;
   color: rgba(255,255,255,0.9);
   text-align: center;
   font-size: 1.1rem;
   line-height: 1em;
-  opacity:0;
+  opacity: 0;
   transition: opacity 0.3s ease, top 0.3s ease;
+  @include border-radius($border-radius-lg);
 }
 
 /* The little chiclet arrow under the tooltip, pointing down */
