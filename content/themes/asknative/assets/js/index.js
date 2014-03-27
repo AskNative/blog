@@ -10,6 +10,14 @@
 
         $(".post-content").fitVids();
 
+        /**
+         * Add parallax effect for blog cover photo
+         */
+
+        $(window).stellar({
+          horizontalScrolling: false,
+          parallaxElements: true
+        });
     });
 
 }(jQuery));
