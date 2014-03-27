@@ -31,25 +31,6 @@
   }
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.post:after {
-  @include border-radius(100%);
-
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  display: block;
-  margin-left: -5px;
-  width: 7px;
-  height: 7px;
-  border: $color-border 1px solid;
-
-  background: #fff;
-  box-shadow: #fff 0 0 0 5px;
-  content: "";
-}
-
 /*
    Post title
    ========================================================================== */
