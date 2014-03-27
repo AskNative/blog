@@ -60,8 +60,8 @@ $font-family-serif:       'Noto Serif', serif;
 $font-family-monospace:   Inconsolata, monospace, sans-serif;
 
 $font-size-base:          1rem;
-$font-size-large:         .2rem;
-// $font-size-small:         2rem;
+$font-size-lg:            .2rem;
+$font-size-sm:            $font-size-base;
 
 $font-size-h1:            ($font-size-base * 5);    // 50px
 $font-size-h2:            ($font-size-base * 4);    // 40px
@@ -70,14 +70,14 @@ $font-size-h4:            ($font-size-base * 3);    // 30px
 $font-size-h5:            ($font-size-base * 2.5);  // 25px
 $font-size-h6:            ($font-size-base * 2);    // 20px
 
-$font-size-h1-lg:         ($font-size-h1 - $font-size-large); // 48px
-$font-size-h1-sm:         ($font-size-h1 - 2rem);             // 30px
+$font-size-h1-lg:         ($font-size-h1 - $font-size-lg); // 48px
+$font-size-h1-sm:         ($font-size-h1 - 2rem);          // 30px
 
-$font-size-h2-lg:         ($font-size-h2 - $font-size-large); // 38px
-$font-size-h2-sm:         ($font-size-h2 - $font-size-base);  // 30px
+$font-size-h2-lg:         ($font-size-h2 - $font-size-lg); // 38px
+$font-size-h2-sm:         ($font-size-h2 - $font-size-sm); // 30px
 
-$font-size-h3-lg:         ($font-size-h3 - $font-size-large); // 33px
-$font-size-h3-sm:         ($font-size-h3 - $font-size-base);  // 28px
+$font-size-h3-lg:         ($font-size-h3 - $font-size-lg); // 33px
+$font-size-h3-sm:         ($font-size-h3 - $font-size-sm); // 28px
 
-$font-size-h4-lg:         ($font-size-h4 - $font-size-large); // 28px
-$font-size-h4-sm:         ($font-size-h4 - .7rem);            // 23px
+$font-size-h4-lg:         ($font-size-h4 - $font-size-lg); // 28px
+$font-size-h4-sm:         ($font-size-h4 - .7rem);         // 23px
