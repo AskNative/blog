@@ -8,7 +8,7 @@
   margin: 4rem auto;
   max-width: 700px;
   width: 80%;
-  color: $color-meta;
+  color: $color-muted;
   text-align: center;
   font-size: 1.3rem;
   font-family: $font-family-sans-serif;
@@ -20,7 +20,7 @@
   }
 }
 
-.pagination a { color: $color-meta; }
+.pagination a { color: $color-muted; }
 
 /*
    Older/Newer posts
@@ -43,7 +43,7 @@
     margin: 10px 0;
   }
 
-  &:hover { border-color: $color-primary; }
+  &:hover { border-color: $color-muted-hover; }
 }
 
 .older-posts { right: 0; }

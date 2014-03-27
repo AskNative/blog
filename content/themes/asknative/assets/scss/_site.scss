@@ -38,7 +38,7 @@
   padding: 4rem 0;
   border-top: $color-border 1px solid;
   background: $footer-bg;
-  color: $color-footer-text;
+  color: $color-muted;
   text-align: center;
   font-size: 1.3rem;
   font-family: $font-family-sans-serif;
@@ -51,8 +51,8 @@
 }
 
 .site-footer a {
-  color: $color-footer-text;
+  color: $color-muted;
   text-decoration: underline;
 
-  &:hover { color: $color-footer-text-hover; }
+  &:hover { color: $color-muted-hover; }
 }

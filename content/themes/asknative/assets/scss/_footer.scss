@@ -47,7 +47,7 @@
   transition: box-shadow 0.25s;
 }
 
-.subscribe:hover:before { color: $color-footer-text-hover; }
+.subscribe:hover:before { color: $color-primary; }
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
 .tooltip {
@@ -56,7 +56,7 @@
   left: -21px;
   display: inline-block;
   padding: 4px 8px 5px 8px;
-  background: $color-footer-text-hover;
+  background: $color-gray-dark;
   box-shadow: 0 1px 4px $color-shadow;
   color: rgba(255,255,255,0.9);
   text-align: center;
@@ -78,7 +78,7 @@
   width: 0;
   border-width: 5px 5px 0 5px;
   border-style: solid;
-  border-color: $color-footer-text-hover transparent;
+  border-color: $color-gray-dark transparent;
   content: "";
 }
 

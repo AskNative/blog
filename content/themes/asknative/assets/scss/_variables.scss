@@ -2,62 +2,83 @@
    Variables
    ========================================================================== */
 
-/**
- * Media queries
- */
+/*
+   Media Queries
+   ========================================================================== */
 
 $screen-lg:               900px;
 $screen-sm:               500px;
 
-/**
- * Border Radius
- */
+/*
+   Border Radius
+   ========================================================================== */
 
 $border-radius-sm:        2px;
 $border-radius-md:        3px;
 $border-radius-lg:        100px; // Capsule
 
+/*
+   Colors
+   ========================================================================== */
+
+$color-base:              #000; // Black
+
 /**
- * Colors
+ * Grayscale
  */
 
-$color-base:              #000;
-
-$color-gray-darker:       lighten($color-base, 13.5%);   // #222
-$color-gray-dark:         lighten($color-base, 20%);     // #333
-$color-gray:              lighten($color-base, 33.5%);   // #555
-$color-gray-light:        lighten($color-base, 60%);     // #999
-$color-gray-lighter:      lighten($color-base, 93.5%);   // #eee — Mainly for strokes and borders
-
-/* Main colors */
-$color-text:              #3A4145;
-$color-primary:           #E64B17;
-$color-meta:              $color-gray-light; // #9EABB3;
-$color-shadow:            rgba(0,0,0,.15);
-$color-border:            $color-gray-lighter;
-
-/* Misc colors */
-$color-twitter:           rgb(58,172,238);
-$color-facebook:          rgb(59,89,152);
-$color-subscribe:         #D2DEE3;
-$color-subscribe-shadow:  rgba(0,0,0,.05);
-
-/* Background colors */
-$body-bg:                 #FFF;
-$cover-bg:                $color-gray-dark;
-$footer-bg:               rgb(253, 247, 238); // #F7F7F7; // #F7FAFB;
-
-/* Footer colors */
-$color-footer-text:       darken($footer-bg, 15%); //CCC //#BBC7CC;
-$color-footer-text-hover: rgb(71, 60, 41); //darken($footer-bg, 40%);  // #50585D
+$color-gray-darker:       lighten($color-base, 13.5%);  // #222
+$color-gray-dark:         lighten($color-base, 20%);    // #333
+$color-gray:              lighten($color-base, 33.5%);  // #555
+$color-gray-light:        lighten($color-base, 60%);    // #999
+$color-gray-lighter:      lighten($color-base, 93.5%);  // #eee
 
 /**
- * Typography
+ * Main
+ */
+
+$color-text:              #3A4145;
+$color-muted:             #CAC1AC;
+$color-muted-hover:       darken($color-muted, 30%);
+
+$color-primary:           #E64B17;
+$color-secondary:         #463E2D;
+
+$color-shadow:            rgba(0,0,0,.15);
+$color-border:            lighten($color-secondary, 68%);
+
+/**
+ * Misc
+ */
+
+$color-twitter:           rgb(58,172,238);
+$color-facebook:          rgb(59,89,152);
+$color-subscribe:         lighten($color-muted, 10%);
+$color-subscribe-shadow:  rgba(0,0,0,.05);
+
+/**
+ * Background
+ */
+
+$body-bg:                 #FFF; // White
+$cover-bg:                $color-gray-dark;
+$footer-bg:               #FDF8F2; // Beige
+
+/*
+   Typography
+   ========================================================================== */
+
+/**
+ * Font family
  */
 
 $font-family-sans-serif:  'Open Sans', sans-serif;
 $font-family-serif:       'Noto Serif', serif;
 $font-family-monospace:   Inconsolata, monospace, sans-serif;
+
+/**
+ * Font size
+ */
 
 $font-size-base:          1rem;
 $font-size-lg:            .2rem;
