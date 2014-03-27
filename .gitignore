@@ -3,6 +3,7 @@
 
 # Then un-ignore the following:
 !.gitignore
+!config.rb
 
 # --- Ghost core server index.js file ---
 # --- Only needed if you edit this file ---
