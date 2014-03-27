@@ -1,0 +1,19 @@
+{{#with author}}
+    <section class="author">
+
+        {{#if image}}
+            <img src="{{image}}" alt="Author Avatar" class="author-avatar" />
+        {{/if}}
+
+        <div class="author-meta">
+            <h4>{{name}}</h4>
+            <p>{{bio}}
+                {{#if website}}
+                    {{#if bio}} • {{/if}}
+                    <a href="{{website}}">{{website}}</a>
+                {{/if}}
+            </p>
+        </div>
+
+    </section>
+{{/with}}
