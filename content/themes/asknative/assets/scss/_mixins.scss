@@ -2,6 +2,10 @@
    Mixins
    ========================================================================== */
 
+/*
+   Layout
+   ========================================================================== */
+
 /**
  * Media Queries mixin - Smaller than 500px
  */
@@ -21,6 +25,10 @@
     @content;
   }
 }
+
+/**
+ * Border Radius
+ */
 
 @mixin border-radius($value) {
   -webkit-border-radius: $value;
