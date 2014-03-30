@@ -18,6 +18,20 @@
           horizontalScrolling: false,
           parallaxElements: true
         });
+
+        /**
+         * Set first image as cover photo for post
+         */
+
+        //// var mainImage = $('img[alt="main-image"]');
+        var mainImage = $('.post-content').find('img').first();
+
+        if ( mainImage.length > 0){
+          var mainImageSource = mainImage.attr('src');
+          $('.post-header').css('background-image','url('+mainImageSource+')');
+          // mainImage.remove();
+        }
+
     });
 
 }(jQuery));
