@@ -4,10 +4,25 @@
 
     {{#post}}
 
+        <div class="navigation">
             {{#if @blog.logo}}
+                <a class="navigation-logo" href="{{@blog.url}}">
+                    <img src="{{@blog.logo}}" alt="Blog Logo"/>
                 </a>
             {{/if}}
 
+            <span class="navigation-links">
+                {{!-- <a href="mailto:hello@asknative.com?subject=feedback" "email me">
+                    Contact Us
+                </a> --}}
+                {{!-- <a href="http://asknative.com" target="_blank">
+                    visit the webapp
+                </a> --}}
+                <a href="http://app.asknative.com" target="_blank" class="button">
+                    GET THE APP
+                </a>
+            </span>
+        </div>
 
         <div class="post-header-content">
             <div class="post">
