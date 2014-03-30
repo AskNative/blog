@@ -29,7 +29,7 @@
         if ( mainImage.length > 0){
           var mainImageSource = mainImage.attr('src');
           $('.post-header').css('background-image','url('+mainImageSource+')');
-          // mainImage.remove();
+          mainImage.remove();
         }
 
     });
