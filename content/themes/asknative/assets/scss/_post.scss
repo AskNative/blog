@@ -35,7 +35,7 @@
    Post title
    ========================================================================== */
 
-.post-title { margin:0; }
+.post-title { margin: 0; }
 
 .post-title a { text-decoration: none; }
 
@@ -88,17 +88,28 @@
 }
 
 /* Insert some mad padding up in the header for better spacing */
-.post-template .post-header {
-  padding: 60px 0;
-  text-align: center;
+// .post-template .post-header {
+//   padding: 60px 0;
+//   text-align: center;
 
-  @include screen-lg { padding: 40px 0; }
-  @include screen-sm { padding: 30px 0; }
+// }
+
+.post-template .post-header {
+  @extend .site-head;
 }
 
-.post-template .blog-title {
-  display: inline-block;
-  padding: 2.5rem 0;
+.post-header .post-header-content {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: left;
+  // @include screen-lg { padding: 40px 0; }
+  @include screen-sm { bottom: 10px; }
+}
+
+.post-template .post-meta {
+  color: #fff;
+  opacity: .7;
 }
 
 /*
@@ -212,9 +223,5 @@
   border-top: $color-border 1px solid;
 }
 
-#disqus_thread {
-  a {
-    color: $color-primary;
-  }
-}
+#disqus_thread a { color: $color-primary; }
 
