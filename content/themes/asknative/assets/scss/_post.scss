@@ -87,13 +87,6 @@
   &:after { display: none; }
 }
 
-/* Insert some mad padding up in the header for better spacing */
-// .post-template .post-header {
-//   padding: 60px 0;
-//   text-align: center;
-
-// }
-
 .post-template .post-header {
   @extend .site-head;
 }
@@ -103,7 +96,6 @@
   bottom: 20px;
   width: 100%;
   text-align: left;
-  // @include screen-lg { padding: 40px 0; }
   @include screen-sm { bottom: 10px; }
 }
 
@@ -189,10 +181,8 @@
   right: 0;
   width: 140px;
   text-align: right;
-  // align-self: center;
 
   @include screen-sm {
-    /* margin-right: 1em; */
     position: static;
     width: auto;
     text-align: center;
